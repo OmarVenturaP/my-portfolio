@@ -148,3 +148,14 @@ header.masthead .masthead-heading {
   padding: 0;
   border-radius: 100%;
 }
+.btn-social1 {
+  height: 4rem;
+  width: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 100%;
+  font-size: 2rem !important;
+  margin: 1rem;
+}
