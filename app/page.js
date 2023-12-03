@@ -1,5 +1,6 @@
 import Header from "./components/header";
 import About from "./components/about";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <div className="container">
         <Header />
         <About />
+        <Footer className="footer" />
       </div>
     </div>
   )
