@@ -161,3 +161,16 @@ header.masthead .masthead-heading {
   font-size: 2rem !important;
   margin: 1rem;
 }
+
+@media (max-width: 575px) {
+
+  .section-card {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .responsive-img-project {
+    height: 230px;
+  }
+  
+}
