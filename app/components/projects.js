@@ -2,16 +2,15 @@
 import React, { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import ModalProject from "./modal";
-import { allProjects, useModal, useProjectInfo } from "./../context/state";
+import { allProjects, useProjectInfo } from "./../context/state";
 import axios from "axios";
 
 
 export default function DataProjects() {
   const url = process.env.NEXT_PUBLIC_API_URL;
-  const [modalShow, setModalShow] = useState(false);
 
   // Abre proyecto individual
-
+  const [modalShow, setModalShow] = useState(false);
   const [infoProject, setInfoProject] = useRecoilState(useProjectInfo);
 
   // Obtiene los datos de los proyectos

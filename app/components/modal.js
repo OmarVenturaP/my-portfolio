@@ -1,15 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { useModal } from "./../context/state";
+import { useRecoilValue } from "recoil";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { useProjectInfo } from "./../context/state";
 import { Modal } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 
 export default function ModalProject(props) {
-  const [modal, setModal] = useRecoilState(useModal);
 
   const project = useRecoilValue(useProjectInfo);
 

@@ -8,15 +8,11 @@ export default function footer() {
         <div className="row align-items-center">
           <div className="col-12 text-center m-0 p-0">
             <p>
-              <strong className="text-dark">
+              <strong className="text-dark me-2">
                 <FontAwesomeIcon width={15} size="2xs" icon={faChevronLeft} />
-                {" "}
-                Omar Ventura Pérez /
+                  Omar Ventura Pérez /
                 <FontAwesomeIcon width={15} icon={faChevronRight} />
-              </strong>
-              {" "}
-              Todos los derechos reservados &copy; 2023
-            </p>
+              </strong>  Todos los derechos &copy; 2023</p>
           </div>
         </div>
       </div>

@@ -31,7 +31,9 @@ export default function HardSkills() {
                     <div className="ms-3 me-3 col-4 col-sm-3 col-md-2 col-xl-1 mt-3 mb-3 justify-content-center" key={skill.id}>
                       <div className={styles.skills}>
                         <div className="w-100 h-100 rounded-circle mx-auto btn-dark justify-content-around">
-                          <img src={skill.hardskill} width={38} height={38} className="text-center" />
+                        <picture>
+                          <img src={skill.hardskill} width={38} height={38} className="text-center" alt={skill.nombre} />
+                        </picture>
                           <p className="text-center text-dark fw-bold">{skill.nombre}</p>
                         </div>
                       </div>
