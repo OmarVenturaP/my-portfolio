@@ -11,21 +11,27 @@ export default function DataProjects() {
   // Abre proyecto individual
   const [modalShow, setModalShow] = useState(false);
   const [infoProject, setInfoProject] = useRecoilState(useProjectInfo);
+  const [project, setProjects] = useRecoilState(allProjects);
 
   // Obtiene los datos de los proyectos
   const getProjectsData = async () => {
-    const response = await axios.get(`https://backend-servitec.onrender.com/projects`);
-    if (response.data.length > 0) {
-      setProjects(response.data);
-    }
-    console.log(response.data);
-  };
+    await fetch("https://backend-servitec.onrender.com/projects", {
+      next: {
+        revalidate: 60,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+      });
+  }
 
-  useEffect(() => {
-    getProjectsData()
-  });
-
-  const [project, setProjects] = useRecoilState(allProjects);
+  useEffect(
+    () => {
+    getProjectsData();
+  }, 
+  [],
+  );
 
   return (
     <>

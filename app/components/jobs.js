@@ -6,17 +6,22 @@ export default function Jobs() {
   const [jobs, setJobs] = useState();
 
   const getJobs = async () => {
-    const response = await axios.get(`https://backend-servitec.onrender.com/jobs`);
-    if (response.data.length > 0) {
-    setJobs(response.data);
-    }
-    console.log(response.data);
-  };
+    await fetch("https://backend-servitec.onrender.com/jobs", {
+      next: {
+        revalidate: 60,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setJobs(data);
+      });
+  }
 
   useEffect(
     () => {
       getJobs();
     },
+    [],
   );
 
   return (

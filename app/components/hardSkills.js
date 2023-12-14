@@ -7,19 +7,22 @@ import styles from "../page.module.css";
 export default function HardSkills() {
   const [hardSkills, setHardSkills] = useState();
 
-  const getSkills = async () => {
-    const response = await axios.get(`https://backend-servitec.onrender.com/skills`);
-    if (response.data.length > 0) {
-    setHardSkills(response.data);
-    }
-    console.log(response.data);
-  };
+  const getHardSkills = async () => {
+    await fetch("https://backend-servitec.onrender.com/skills", {
+      next: {
+        revalidate: 60,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setHardSkills(data);
+      });
+  }
 
-  useEffect(
-    () => {
-      getSkills();
-    },
-  );
+  useEffect(() => {
+    getHardSkills();
+  }, []);
+
 
   return (
     <>

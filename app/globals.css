@@ -196,6 +196,9 @@ header.masthead .masthead-heading {
   .responsive-img-project {
     height: 230px;
   }
+  .brand-logo {
+    width: 200px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -203,19 +206,41 @@ header.masthead .masthead-heading {
     height: 200px;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 440px) {
   .responsive-img-project {
     height: 180px;
   }
+  .brand-logo {
+    width: 160px;
+  }
 }
-@media (max-width: 390px) {
+@media (max-width: 410px) {
   .responsive-img-project {
     height: 160px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .responsive-img-project {
     height: 120px;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 1rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 322px) {
+  .responsive-img-project {
+    height: 100px;
+  }
+  .brand-logo {
+    width: 150px;
+  }
+}
+@media (max-width: 290px) {
+  .responsive-img-project {
+    height: 80px;
   }
 }
 
