@@ -7,7 +7,6 @@ import axios from "axios";
 
 
 export default function DataProjects() {
-  const url = process.env.NEXT_PUBLIC_API_URL;
 
   // Abre proyecto individual
   const [modalShow, setModalShow] = useState(false);
@@ -15,8 +14,11 @@ export default function DataProjects() {
 
   // Obtiene los datos de los proyectos
   const getProjectsData = async () => {
-    const response = await axios.get(`${url}/projects`);
-    setProjects(response.data);
+    const response = await axios.get(`https://backend-servitec.onrender.com/projects`);
+    if (response.data.length > 0) {
+      setProjects(response.data);
+    }
+    console.log(response.data);
   };
 
   useEffect(() => {

@@ -5,11 +5,14 @@ import axios from "axios";
 import styles from "../page.module.css";
 
 export default function HardSkills() {
-  const url = process.env.NEXT_PUBLIC_API_URL;
+  const [hardSkills, setHardSkills] = useState();
 
   const getSkills = async () => {
-    const response = await axios.get(`${url}/skills`);
+    const response = await axios.get(`https://backend-servitec.onrender.com/skills`);
+    if (response.data.length > 0) {
     setHardSkills(response.data);
+    }
+    console.log(response.data);
   };
 
   useEffect(
@@ -17,8 +20,6 @@ export default function HardSkills() {
       getSkills();
     },
   );
-
-  const [hardSkills, setHardSkills] = useState();
 
   return (
     <>

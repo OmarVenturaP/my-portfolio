@@ -3,13 +3,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function Jobs() {
-  const url = process.env.NEXT_PUBLIC_API_URL;
-  const getJobs = async () => {
-    const response = await axios.get(`${url}/jobs`);
-    setJobs(response.data);
-  };
-
   const [jobs, setJobs] = useState();
+
+  const getJobs = async () => {
+    const response = await axios.get(`https://backend-servitec.onrender.com/jobs`);
+    if (response.data.length > 0) {
+    setJobs(response.data);
+    }
+    console.log(response.data);
+  };
 
   useEffect(
     () => {
