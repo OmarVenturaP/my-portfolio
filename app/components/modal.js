@@ -20,7 +20,7 @@ export default function ModalProject(props) {
     centered
   >
     <Modal.Header className="bg-secondary" closeButton>
-      <Modal.Title id="contained-modal-title-vcenter" className="text-center">
+      <Modal.Title id="contained-modal-title-vcenter" className="text-center text-btn">
         {project.nombre}
       </Modal.Title>
     </Modal.Header>
@@ -29,7 +29,7 @@ export default function ModalProject(props) {
       <img className="img-fluid mx-auto" src={project.img} height={400} width={400} alt={project.nombre} />
     </picture>
     <div className="pt-3 m-0 p-0">
-      <p>{project.descripcion}</p>
+      <p className="text-light">{project.descripcion}</p>
     </div>
     </Modal.Body>
     <Modal.Footer className="bg-secondary justify-content-center">

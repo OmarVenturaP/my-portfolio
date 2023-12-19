@@ -9,9 +9,9 @@ export default function nav() {
         </a>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-            <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
-            <li className="nav-item"><a className="nav-link" href="#portfolio">Proyectos</a></li>
             <li className="nav-item"><a className="nav-link" href="#jobs">Experiencia</a></li>
+            <li className="nav-item"><a className="nav-link" href="#portfolio">Proyectos</a></li>
+            <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
             <li className="nav-item"><a className="nav-link" href="#about">sobre mi</a></li>
           </ul>
         </div>

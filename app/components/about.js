@@ -15,7 +15,7 @@ export default function about() {
           <div className="col-lg-6">
             <div className="team-member text-center mb-3">
               <picture>
-                <img className="mx-auto rounded-circle" src="https://res.cloudinary.com/dzgqpqv9f/image/upload/v1701406423/profile_lzmeh1.png" width={200} alt="..." />
+                <img className="mx-auto rounded-circle" src="https://res.cloudinary.com/dzgqpqv9f/image/upload/v1701406423/profile_lzmeh1.png" width={200} alt="Omar Ventura" />
               </picture>
               <h4 className="mt-3 mb-4">Omar Ventura</h4>
               <OverlayTrigger overlay={<Tooltip id="top"><strong>Github</strong></Tooltip>}><a className="btn btn-dark btn-social mx-2" href="https://github.com/OmarVenturaP" aria-label="Omar Ventura GitHub Profile" target="_blank" rel="noreferrer"><FontAwesomeIcon className="p-2" icon={faGithub} /></a></OverlayTrigger>
@@ -35,16 +35,9 @@ export default function about() {
             <OverlayTrigger overlay={<Tooltip id="top"><strong>Actualización constante</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faArrowsRotate} /></a></OverlayTrigger>
             <OverlayTrigger overlay={<Tooltip id="top"><strong>Abierto a dudas</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-4" icon={faQuestion} /></a></OverlayTrigger>
             <OverlayTrigger overlay={<Tooltip id="top"><strong>Sociable</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faUserPlus} /></a></OverlayTrigger>
-            <OverlayTrigger overlay={<Tooltip id="top"><strong>Ayuda mutua</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faPersonChalkboard} /></a></OverlayTrigger>
             <OverlayTrigger overlay={<Tooltip id="top"><strong>Empatía</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faPeopleCarryBox} /></a></OverlayTrigger>
             <OverlayTrigger overlay={<Tooltip id="top"><strong>Comunicación</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faComments} /></a></OverlayTrigger>
             <OverlayTrigger overlay={<Tooltip id="top"><strong>Dispuesto a escuchar</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faEarListen} /></a></OverlayTrigger>
-            <OverlayTrigger overlay={<Tooltip id="top"><strong>Gusto por la lectura</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faBook} /></a></OverlayTrigger>
-            <OverlayTrigger overlay={<Tooltip id="top"><strong>Gusto por cocinar</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faKitchenSet} /></a></OverlayTrigger>
-            <OverlayTrigger overlay={<Tooltip id="top"><strong>Gusto por los deportes</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faFootball} /></a></OverlayTrigger>
-            <OverlayTrigger overlay={<Tooltip id="top"><strong>Gusto por entretenimiento</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faTv} /></a></OverlayTrigger>
-            <OverlayTrigger overlay={<Tooltip id="top"><strong>Juegos de Estrategia</strong></Tooltip>}><a className="btn btn-dark btn-social1 mx-1"><FontAwesomeIcon className="p-3" icon={faChessKnight} /></a></OverlayTrigger>
-
           </div>
         </div>
         <div className="row mt-5">

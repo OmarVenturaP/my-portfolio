@@ -12,9 +12,9 @@ export default function Home() {
       <Header />
       <div className="container">
         <Nav />
-        <HardSkills />
-        <Projects/>
         <Jobs/>
+        <Projects/>
+        <HardSkills />
         <About />
       </div>
       <Footer className="footer" />

@@ -6,11 +6,7 @@ export default function Jobs() {
   const [jobs, setJobs] = useState();
 
   const getJobs = async () => {
-    await fetch("https://backend-servitec.onrender.com/jobs", {
-      next: {
-        revalidate: 60,
-      },
-    })
+    await fetch("https://backend-servitec.onrender.com/jobs")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);

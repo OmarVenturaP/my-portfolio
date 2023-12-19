@@ -16,9 +16,7 @@ export default function DataProjects() {
   // Obtiene los datos de los proyectos
   const getProjectsData = async () => {
     await fetch("https://backend-servitec.onrender.com/projects", {
-      next: {
-        revalidate: 60,
-      },
+      revalidate: 0,
     })
       .then((res) => res.json())
       .then((data) => {
@@ -35,9 +33,9 @@ export default function DataProjects() {
 
   return (
     <>
-      <div className="container">
-        <div className="text-center mt-5">
-          <h1 className="">Proyectos</h1>
+      <div className="container mt-5" id="portfolio">
+        <div className="text-center mt-5 pt-3">
+          <h1 className="mt-5 pt-5" >Proyectos</h1>
           <h4 className="section-subheading mb-3"></h4>
         </div>
         <div className="row justify-content-around mt-5">

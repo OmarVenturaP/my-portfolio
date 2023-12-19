@@ -141,6 +141,24 @@ header.masthead .masthead-heading {
   background-color: #4cfdfd;
   border-color: #212529;
 }
+.btn-skills {
+  border : 1px solid #4cfdfd1c;
+  background-color: #4cfdfd19;;
+}
+.img-color {
+  color: #4cfdfd;
+}
+.text-btn{
+  color: #4cfdfd;
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
 .btn-social {
   height: 2.5rem;
@@ -178,10 +196,11 @@ header.masthead .masthead-heading {
     height: 140px;
   }
 }
-
+.card {
+  transition: all 0.3s ease-out;
+}
 .card:hover {
   transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 575px) {
@@ -194,7 +213,7 @@ header.masthead .masthead-heading {
     padding-right: 0px !important;
   }
   .responsive-img-project {
-    height: 230px;
+    height: 210px;
   }
   .brand-logo {
     width: 200px;
@@ -203,7 +222,7 @@ header.masthead .masthead-heading {
 
 @media (max-width: 480px) {
   .responsive-img-project {
-    height: 200px;
+    height: 190px;
   }
 }
 @media (max-width: 440px) {
@@ -216,7 +235,7 @@ header.masthead .masthead-heading {
 }
 @media (max-width: 410px) {
   .responsive-img-project {
-    height: 160px;
+    height: 150px;
   }
 }
 @media (max-width: 380px) {
@@ -241,6 +260,11 @@ header.masthead .masthead-heading {
 @media (max-width: 290px) {
   .responsive-img-project {
     height: 80px;
+  }
+}
+@media (max-width: 260px) {
+  .responsive-img-project {
+    height: 60px;
   }
 }
 
