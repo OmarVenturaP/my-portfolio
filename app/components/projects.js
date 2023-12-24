@@ -1,9 +1,8 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useRecoilState } from "recoil";
 import ModalProject from "./modal";
 import { allProjects, useProjectInfo } from "./../context/state";
-import axios from "axios";
 
 
 export default function DataProjects() {
@@ -12,24 +11,6 @@ export default function DataProjects() {
   const [modalShow, setModalShow] = useState(false);
   const [infoProject, setInfoProject] = useRecoilState(useProjectInfo);
   const [project, setProjects] = useRecoilState(allProjects);
-
-  // Obtiene los datos de los proyectos
-  const getProjectsData = async () => {
-    await fetch("https://backend-servitec.onrender.com/projects", {
-      revalidate: 0,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setProjects(data);
-      });
-  }
-
-  useEffect(
-    () => {
-    getProjectsData();
-  }, 
-  [],
-  );
 
   return (
     <>

@@ -1,26 +1,12 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import styles from "../page.module.css";
+import { useRecoilState } from "recoil";
+import { allSkills } from "./../context/state";
 
 export default function HardSkills() {
-  const [hardSkills, setHardSkills] = useState();
-
-  const getHardSkills = async () => {
-    await fetch("https://backend-servitec.onrender.com/skills")
-      .then((res) => res.json())
-      .then((data) => {
-        setHardSkills(data);
-      });
-  }
-
-  useEffect(
-    () => {
-    getHardSkills();
-  }, 
-  [],
-  );
+  const [hardSkills, setSkills] = useRecoilState(allSkills);
+  
 
   return (
     <>
@@ -28,9 +14,10 @@ export default function HardSkills() {
         <h1 className="text-center mt-5 pt-5 mb-5">Skills</h1>
         <div className="row justify-content-center col-12">
           {
-                hardSkills ? (
-                  hardSkills.map((skill) => (
-                    <div className="ms-3 me-3 col-4 col-sm-3 col-md-2 col-xl-1 mt-3 mb-3 justify-content-center" key={skill.id}>
+                hardSkills.length ? (
+                  hardSkills.map((skill, key) => (
+                    
+                    <div className="ms-3 me-3 col-4 col-sm-3 col-md-2 col-xl-1 mt-3 mb-3 justify-content-center" key={key}>
                       <div className={styles.skills}>
                         <div className="w-100 h-100 rounded-circle mx-auto btn-skills justify-content-around">
                         <picture>
