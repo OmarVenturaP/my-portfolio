@@ -327,11 +327,12 @@ picture {
   border: 7px solid #fff;
   border-radius: 100%;
   background-color: #4cfdfd;
+  transition: all 1s ease-in-out;
 }
 .timeline > li .timeline-image:hover {
   border: 7px solid #343a40;
   transform: scale(1.2);
-  transition: all 1s;
+  
 }
 .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
   font-size: 10px;
