@@ -10,16 +10,16 @@ import Footer from "./components/footer";
 export default function Home() {
   return (
     <div className="bg-dark text-light">
-      <Data/>
+      <Data />
       <Header />
       <div className="container">
         <Nav />
-        <Jobs/>
-        <Projects/>
+        <Jobs />
+        <Projects />
         <HardSkills />
         <About />
       </div>
       <Footer className="footer" />
     </div>
-  )
+  );
 }

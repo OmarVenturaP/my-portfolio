@@ -1,4 +1,7 @@
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function footer() {
@@ -10,9 +13,11 @@ export default function footer() {
             <p>
               <strong className="text-dark me-2">
                 <FontAwesomeIcon width={15} size="2xs" icon={faChevronLeft} />
-                  Omar Ventura Pérez /
+                Omar Ventura Pérez /
                 <FontAwesomeIcon width={15} icon={faChevronRight} />
-              </strong>  Todos los derechos &copy; 2023</p>
+              </strong>{" "}
+              Todos los derechos &copy; 2023
+            </p>
           </div>
         </div>
       </div>

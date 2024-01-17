@@ -9,21 +9,14 @@ import {
   faFilePdf,
   faPeopleGroup,
   faUserGear,
-  faPersonChalkboard,
   faPeopleCarryBox,
   faComments,
   faEarListen,
   faGraduationCap,
   faUserPlus,
-  faBook,
-  faKitchenSet,
-  faFootball,
-  faTv,
   faQuestion,
-  faArrowRotateBack,
   faArrowsRotate,
   faArrowsSplitUpAndLeft,
-  faChessKnight,
 } from "@fortawesome/free-solid-svg-icons";
 import Tooltip from "react-bootstrap/Tooltip";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
@@ -225,7 +218,7 @@ export default function about() {
             <OverlayTrigger
               overlay={
                 <Tooltip id="top">
-                  <strong>Abierto a dudas</strong>
+                  <strong>Pensamiento crítico</strong>
                 </Tooltip>
               }
             >

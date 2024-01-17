@@ -1,59 +1,53 @@
 const { atom } = require("recoil");
 
 const useModal = atom({
-    key: "useModal",
-    default: false,
+  key: "useModal",
+  default: false,
 });
 
 const allProjects = atom({
-    key: "allProjects",
-    default: {
-        id: "",
-        nombre: "",
-        url_repo: "",
-        url_demo: "",
-        descripcion: "",
-        img: "",
-    },
+  key: "allProjects",
+  default: {
+    id: "",
+    nombre: "",
+    url_repo: "",
+    url_demo: "",
+    descripcion: "",
+    img: "",
+  },
 });
 
 const allSkills = atom({
-    key: "allSkills",
-    default: {
-        id: "",
-        nombre: "",
-        img: "",
-    },
+  key: "allSkills",
+  default: {
+    id: "",
+    nombre: "",
+    img: "",
+  },
 });
 
 const allJobs = atom({
-    key: "allJobs",
-    default: {
-        id: "",
-        posicion: "",
-        empresa: "",
-        periodo: "",
-        descripcion: "",
-        logo: "",
-    },
+  key: "allJobs",
+  default: {
+    id: "",
+    posicion: "",
+    empresa: "",
+    periodo: "",
+    descripcion: "",
+    logo: "",
+  },
 });
 
 const useProjectInfo = atom({
-    key: "useProjectInfo",
-    default: {
-        id: "",
-        nombre: "",
-        url_repo: "",
-        url_demo: "",
-        descripcion: "",
-        img: "",
-    },
+  key: "useProjectInfo",
+  default: {
+    id: "",
+    nombre: "",
+    url_repo: "",
+    url_demo: "",
+    descripcion: "",
+    img: "",
+  },
 });
 
-export {
-    useModal,
-    useProjectInfo,
-    allProjects,
-    allSkills,
-    allJobs,
-};
+export { useModal, useProjectInfo, allProjects, allSkills, allJobs };
