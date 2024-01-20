@@ -1,18 +1,16 @@
-"use client";
-import React from "react";
-import { useRecoilState } from "recoil";
-import { allJobs } from "../context/state";
+import { pool } from "../lib/db";
 
-export default function Jobs() {
-  const [jobs, setJobs] = useRecoilState(allJobs);
+export default async function Job({ params }) {
+  const client = await pool.connect();
+  const { rows } = await client.query(`SELECT * from jobs`);
 
   return (
-    <>
+    <div>
       <div className="container mt-5 pt-5 mb-5 pb-5" id="jobs">
-        <h1 className="text-center mt-5 pt-5 mb-5 ">Experiencia en TI</h1>
+        <h1 className="text-center mt-5 pt-5 mb-5 ">Experiencia en IT</h1>
         <ul className="timeline mb-5 ms-5 me-5 z-2">
-          {jobs.length ? (
-            jobs
+          {rows.length ? (
+            rows
               .slice(0)
               .reverse()
               .map((job, key) =>
@@ -93,6 +91,6 @@ export default function Jobs() {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 }

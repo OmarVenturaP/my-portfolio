@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           rel="stylesheet"
         />
+        <script src="//unpkg.com/alpinejs" defer></script>
       </head>
       <AppProvider>
         <body className={inter.className}>

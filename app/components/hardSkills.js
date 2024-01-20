@@ -1,19 +1,17 @@
-"use client";
-import React from "react";
+import { pool } from "../lib/db";
 import styles from "../page.module.css";
-import { useRecoilState } from "recoil";
-import { allSkills } from "./../context/state";
 
-export default function HardSkills() {
-  const [hardSkills, setSkills] = useRecoilState(allSkills);
+export default async function Skills({ params }) {
+  const client = await pool.connect();
+  const { rows } = await client.query(`SELECT * from skills`);
 
   return (
     <>
       <div className="container pb-5 pt-5 mb-5" id="skills">
         <h1 className="text-center mt-5 pt-5 mb-5">Skills</h1>
         <div className="row justify-content-center col-12">
-          {hardSkills.length ? (
-            hardSkills
+          {rows.length ? (
+            rows
               .slice(0)
               .sort((a, b) => a.id - b.id)
               .map((skill, key) => (
